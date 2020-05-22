@@ -141,7 +141,7 @@ table {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
 }
@@ -150,6 +150,10 @@ img {
 *:before,
 *:after {
     box-sizing: border-box;
+}
+
+a {
+    display: block;
 }
 
 
@@ -345,10 +349,6 @@ img {
     text-align: center;
 }
 
-.sort-img-w {
-    max-width: 792px;
-}
-
 
 /* ----------header---------------- */
 
@@ -382,6 +382,10 @@ img {
     margin: 40px 0;
     margin-left: 64px;
     color: #FFFFFF;
+}
+
+.global-nav li a:hover {
+    border-bottom: 1px solid #fff;
 }
 
 
@@ -510,7 +514,7 @@ img {
 /* ----------service------------ */
 
 .service li {
-    max-width: 282px;
+    width: 23.5%;
     text-align: center;
     color: #000;
 }
@@ -546,7 +550,6 @@ img {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        margin: 0 48px 0 48px;
     }
     .service .order {
         order: -1;
@@ -556,7 +559,7 @@ img {
         order: -1;
     }
     .service ul li {
-        max-width: 48.2%;
+        width: 48.2%;
         padding: 20px 50px 8px 50px;
         margin-bottom: 12px;
     }
@@ -584,6 +587,9 @@ img {
         padding-top: 32px;
         padding-bottom: 48px;
     }
+    .service .container {
+        max-width: 375px;
+    }
     .service h2 {
         font-size: 1.5rem;
         line-height: 1.415;
@@ -594,7 +600,7 @@ img {
         margin: 0px;
     }
     .service ul li {
-        max-width: 100%;
+        width: 100%;
         margin: 0px;
         padding-left: 64px;
         padding-right: 64px;
@@ -611,6 +617,14 @@ img {
 .sort-items li {
     display: flex;
     align-items: center;
+}
+
+.sort-items .photo {
+    width: 66%;
+}
+
+.sort-items h3 {
+    width: 34%
 }
 
 .sunglasses {
@@ -655,7 +669,6 @@ img {
 
 @media(max-width:992px) {
     .sort {
-        max-width: 672px;
         margin-top: 40px;
         margin-bottom: 40px;
     }
@@ -664,8 +677,15 @@ img {
         line-height: 1.43;
         margin-bottom: 32px;
     }
-    .sort-items img {
-        max-width: 410.8px;
+    .sort .sort-items {
+        max-width: 672px;
+        margin: 0 auto;
+    }
+    .sort-items .photo {
+        width: 60%;
+    }
+    .sort-items h3 {
+        width: 40%;
     }
     .sort-items .sunglasses {
         flex-direction: row;
@@ -691,17 +711,23 @@ img {
 
 @media(max-width:767px) {
     .sort {
+        max-width: 372px;
         margin-top: 24px;
         margin-bottom: 24px;
     }
-    .sort-items {
+    .sort .sort-items {
         max-width: 352px;
         margin: 0 auto;
     }
     .sort-items li {
         position: relative;
-        width: 100%;
         margin-bottom: 8px;
+    }
+    .sort-items .photo {
+        width: 100%;
+    }
+    .sort-items h3 {
+        width: 100%;
     }
     .sunglass-img:hover::before {
         opacity: 0;
@@ -725,7 +751,7 @@ img {
         width: 32px;
         height: 25px;
         top: 4%;
-        left: 0%;
+        left: 27%;
     }
     .sun::before {
         content: '';
@@ -735,7 +761,7 @@ img {
         width: 32px;
         height: 31.5px;
         top: 4%;
-        left: 0%;
+        left: 18%;
     }
     .flash::before {
         content: '';
@@ -745,7 +771,7 @@ img {
         width: 32px;
         height: 31.5px;
         top: 4%;
-        left: 0%;
+        left: 20%;
     }
 }
 
@@ -1272,6 +1298,10 @@ img {
     color: #fff;
 }
 
+.contact-form .submitBtn:hover {
+    background: rgb(193, 99, 95);
+}
+
 
 /* ---------------contact RWD--------------- */
 
@@ -1379,6 +1409,10 @@ img {
     text-decoration: none;
     color: #ffffff;
     display: block;
+}
+
+.footerInner a:hover {
+    border-bottom: 1px solid #fff;
 }
 
 .footerLinks .facebookIcon {
